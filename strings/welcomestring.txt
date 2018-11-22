@@ -1,0 +1,5 @@
+Hello!
+I am the YTDL Bot!
+Just type /download and your YouTube Link and I'll send the Link back to you in the mp3 format!
+
+Text me /help to see all commands
