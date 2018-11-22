@@ -1,0 +1,21 @@
+This Bot is written in python3 using the following code or software:
+pytube(1), mp3-tagger(2), python-telegram-bot(3), ffmpeg(4)
+
+1: https://github.com/nficano/pytube
+2: https://github.com/artcom-net/mp3-tagger
+3: https://github.com/python-telegram-bot/python-telegram-bot
+4: https://www.ffmpeg.org/
+
+You find the Source Code of this bot here: https://github.com/thallosaurus/telegram-yt-downloader
+
+What information does this bot store?
+It only stores basic informations about the convesion as logfile, what video you downloaded and when, but does NOT store any information that can lead to identification.
+
+Heya, I found a Bug/wanna request a Feature?
+Please create a new Ticket on the GitHub Project page. If you have found a bug or malfunction please provide the following Informations:
+- Link of the YouTube Video
+- Time and Date
+Every Bugreport without these infos will be ignored!
+
+How can I contact you?
+The best way would be to send me an E-Mail to activator112233@gmail.com

@@ -1,2 +1,4 @@
 Available commands:
 /download <youtube-link> - Downloads the link as mp4, converts it and sends it back as mp3. Also supports multiple links
+
+/about - sends you informations about this bot and how to report bugs or request new features
