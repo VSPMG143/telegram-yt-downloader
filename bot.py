@@ -1,7 +1,6 @@
 import telegram
 from telegram.ext import Updater, CommandHandler
 import logging
-import signal, sys
 import convertkit
 import _thread
 import pytube
@@ -18,9 +17,6 @@ bot = telegram.Bot(token)
 updater = Updater(token)
 dispatcher = updater.dispatcher
 
-#def startServer(a, b):
-#  httpd.runWebServer()
-
 def setup():
   print("Starting YTDL_Bot...")
   start_handler = CommandHandler('start', start)
@@ -32,7 +28,6 @@ def setup():
   dispatcher.add_handler(help_handler)
   dispatcher.add_handler(about_handler)
   updater.start_polling()
-#  _thread.start_new_thread(startServer, (None, None))
 
 def messageParse(message):
   new = str(message).split(" ")
@@ -71,11 +66,4 @@ def _download(bot, update):
     else:
       print ("Done")
       bot.send_audio(chat_id=update.message.chat_id, audio=open(media, 'rb',))
-
-def stopBot(a, b):
-  updater.stop()
-  print ("SIGINT caught")
-  sys.exit(0)
-
-#signal.signal(signal.SIGINT, stopBot)
 setup()
