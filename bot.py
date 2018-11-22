@@ -12,7 +12,7 @@ from pytube.exceptions import RegexMatchError as LinkNotFound
 You have to paste your API Token here:
 """
 
-token = "INPUT YOUR TOKEN HERE"
+token = "INSERT YOUR TOKEN HERE"
 
 bot = telegram.Bot(token)
 updater = Updater(token)
@@ -26,9 +26,11 @@ def setup():
   start_handler = CommandHandler('start', start)
   download_handler = CommandHandler("download", download)
   help_handler = CommandHandler("help", help)
+  about_handler = CommandHandler("about", about)
   dispatcher.add_handler(start_handler)
   dispatcher.add_handler(download_handler)
   dispatcher.add_handler(help_handler)
+  dispatcher.add_handler(about_handler)
   updater.start_polling()
 #  _thread.start_new_thread(startServer, (None, None))
 
@@ -47,6 +49,10 @@ def start(bot, update):
 
 def help(bot, update):
   msg = open("./strings/help.txt", 'r')
+  bot.send_message(chat_id=update.message.chat_id, text=msg.read())
+
+def about(bot, update):
+  msg = open("./strings/about.txt", "r")
   bot.send_message(chat_id=update.message.chat_id, text=msg.read())
 
 def download(bot, update):
